@@ -1,0 +1,274 @@
+Erik Strait
+
+Homework:
+-Chapter 1.1(pg 54-58): 1.1.1-1.1.8, 1.1.12
+-Chapter 1.2(pg 114-115): 1.2.3, 1.2.12
+- Chapter 1.3(pg 161-162): 1.3.3, 1.3.9
+Chapter 1.4(pg 208-209): 1.4.1, 1.4.5, 1.4.6, 1.4.9
+
+--------------------------------------------------------------------------------------------------
+
+1.1.1
+	a. 7.5 -> 7
+	b. 200.0000002
+	c. true
+
+1.1.2
+	a. double, 1.618
+	b. double, 10
+	c. boolean, true
+	d. string, 33
+
+1.1.3
+	int a,b,c;
+	if (a==b && b==c)
+		system.out.println("Equal");
+	else
+		System.out.println("Not Equal");
+
+1.1.4
+	a. then is not required
+	b. a>c needs to be enclosed in a bracket
+	c. correct as is
+	d. ";" after c=0
+
+1.1.5
+	double a,b;
+	System.out.println("Enter a double variable:);
+		double a = keyboard.nextDouble();
+	System.out.println("Enter a double variable:);
+		double b = keyboard.nextDouble();
+	if((a>0 && A<1)&&(b>0 && b<1))
+		System.out.println("True");
+	else
+		System.out.println("False");
+
+*1.1.6
+	0
+	1
+	1
+	2
+	3
+	5
+	8
+	13
+	21
+	34
+	55
+	69
+	144
+	233
+	377
+	610
+
+1.1.7
+	a. 1.00009
+	b. 499500
+	c. 10000
+
+1.1.8
+	a. b
+	b. (98+99) 197
+	c. e
+
+1.1.12
+	0,1,2,3,4,5,6,7,8,9
+--------------------------------------------------------------------------------------------------
+*1.2.3
+int N= Integer.parseInt(args[0]);
+double min=Double.parseDouble(args[1]);
+double max=Double.parseDouble(args[2]);
+Interval2D[] l2DObj=new Interval2D[N];
+Interval1D[][] l1DObj= new Interval1D[N][2];
+stdDraw.setCanvasSize(720,512);
+stdDraw.setXscale9min,max);
+stdDraw.setYscale(min,max);
+for(int i=0; i  
+{	double [] d1= getDoubles(min,max);
+	Interval1D x= new Interval1D(d1[0], d1[1]);
+	d1= getDoubles(min,max):
+	Interval1D y= new Interval1D(d1[0], d1[1]);
+l1DObj[i][0] = x;
+;1dObj[i][1] = y;
+l2DObj[i]= new Interval2D(x,y);
+}
+int n = intersectPair(l2DObj);
+	StdOut.println("Count of pairs of intervals that intersect" +n);
+int n1 = containPair(l1DObj);
+	StdOut.println("Count of intervals that are contained in one another" + n1);
+
+public static double[] getDoubles(double min, double max)
+{
+double[] a= new double[2];
+a[0]= StdRandom.uniform(min,max);
+a[1]= StdRandom.uniform(min,max);
+Arrays.sort(a);
+return a:
+}
+public static int intersectPair(Interval2D[] inters)
+{
+int count=0;
+int length= inters.length;
+for(int i=0; i<= lenth-2; i++)
+for(int j=i+1; j<=lenth-1; j++)
+	if(inters[i].intersects(inters[j]))
+count +=1;
+return count;
+}
+public static int containPair(Interval1D[][] inters)
+{
+int count=0;
+int lenth= inters.length;
+for(int i=0; i<= lenth-2; i++)
+for(int j=i+1; j<=lenth-1; j++)
+	if(Overlap(inters[i], inters[j]))
+count +=1;
+return count;
+}
+public static boolean Overlap(Interval1D[] int1, Interval1D[] int2)
+{
+Interval1D x1= int1[0];
+Interval1D y1= int1[1];
+Interval1D x2= int2[0];
+Interval1D y2= int2[1];
+if(x1.min() != x2.min()) return false;
+if(x1.max() != x2.max()) return false;
+if(y1.min() != y2.min()) return false;
+if(y1.max() != y2.max()) return false;
+reutrn true;
+}}
+
+
+
+*1.2.12
+import java.util.Calendar;
+public class SmartDate
+{
+private final int month;
+private final int date;
+porivate final int year;
+private static int [] days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+public SmartDate(int mon, int dt, int yr)
+{
+if(yr<=1)
+	throw new RuntimeException("Illegal year");
+else	
+	year=yr;
+if(mon<1 || mon>12)
+	throw new RuntimeException("Illegal month");
+else 	
+	month=mon;
+if(dt<1 || dt>days[mon-1])
+	throw new RuntimeException("Illegal day");
+else 
+	date=dt;
+}
+public int month()
+{
+return month;
+}
+public int day()
+{
+return date;
+}
+public int year()
+{
+return year;
+}
+public String toString()
+{
+return month()+ "/" +day() +"/" + year();
+}
+public static String dayOfWeek(int yr, int mon, int dt)
+{
+Calendar calndr= Calendar.getInstance();
+calndr.set(yr, mon-1, dt);
+String[] DayOfWeek= new String[]{"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+return DayOfWekk[calndr.get(Calendar.DAY_OF_WEEK)-1];
+}
+
+
+--------------------------------------------------------------------------------------------------
+
+1.3.3
+	a. will not occur (thrid digit is 2)
+	b. will occur
+	c. will occur
+	d. will not occur (thrid digit is 2) 
+	e. will occur
+	f. will occur
+	g. will occur
+	h. will not occur (second digit is 1)	 
+
+
+1.3.9
+import edu.princeton.cs.algs4.Stack;
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdIn;
+public class 1.3.9
+{
+public static void main(String[] args)
+}
+Stack ops = new Stack();
+Stack exp = new Stack();
+StdOut.println("Enter an expression only with" + "right parenthesis, seperated by space");
+while (!StdIn.isEmpty())
+{
+String inp = StdIn.readString();
+if (inp.equals("+") || inp.equals("-") || inp.equals("*") || inp.equals("/"))
+	ops.push(inp);
+else if (inp.equals(")"))
+{
+String op = ops.pop();
+String opernd1 = exp.pop();
+String opernd2 = exp.pop();
+String newExp = "(" + opernd2 + "" + op + "" + opernd1 + ")";
+exp.push(newExp);
+}
+else
+	exp.push(inp);
+}
+StdOut.println("The equivalent infix expression" + "is");
+while (!exp.isEmpty())
+StdOut.print(exp.pop() + " ");
+}}
+
+
+--------------------------------------------------------------------------------------------------
+
+Chapter 1.4(pg 208-209): 
+
+1.4.1
+	(N(N-1)(N+1))/6		
+
+1.4.5
+	a. N
+	b. 1
+	c. 1
+	d. 2N^3
+	e. 1
+	f. 2
+	g. N^100
+
+1.4.6
+	a. O(1)
+	b. O(i)
+	c. O(2)
+
+1.4.9
+	2^rN0 = 2^rbT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
