@@ -1,0 +1,135 @@
+Erik Strait
+
+Homework:
+-Chapter 2.1(pg 264): 2.1.1, 2.1.5, 2.1.9, 2.1.12
+-Chapter 2.2(pg 286): 2.2.17
+
+--------------------------------------------------------------------------------------------------
+
+2.1.1 pg 249
+
+i	min	0	1	2	3	4	5	6	7	8	9	10	11
+		E	A	S	Y	Q	U	E	S	T	I	O	N
+0	1	E	A	S	Y	Q	U	E	S	T	I	O	N
+1	1	A	E	S	Y	Q	U	E	S	T	I	O	N
+2	6	A	E	S	Y	Q	U	E	S	T	I	O	N	
+3	9	A	E	E	Y	Q	U	S	S	T	I	O	N		
+4	11	A	E	E	I	Q	U	S	S	T	Y	O	N
+5	10	A	E	E	I	N	U	S	S	T	Y	O	Q
+6	7	A	E	E	I	N	O	Q	S	T	Y	U	S
+7	11	A	E	E	I	N	O	Q	S	T	Y	U	S
+8	11	A	E	E	I	N	O	Q	S	S	Y	U	T
+9	10	A	E	E	I	N	O	Q	S	S	T	U	Y
+10	11	A	E	E	I	N	O	Q	S	S	T	U	Y
+11		A	E	E	I	N	O	Q	S	S	T	U	Y
+
+
+
+2.1.5
+	for(int i=1, i)
+	for(int j=i; j>0 && a[j-1]; j--)
+	exch(a, j, j-1);
+
+
+2.1.9 shellsort 2.3 pg 260
+		123456789012345678901
+input		EASYSHELLSORTQUESTION
+13-sort		EASYSHELLSORTQUESTION
+4-sort		EASYLHELSSORSQUETTION
+1-sort		AEEEHILLNOOQRSSSSTTUY
+
+
+2.1.12 
+{
+StdOut.println("h\t Comparisons per h\t Ratio");
+	for(int n=2; n<7; n++)
+{
+List in= new ArrayList();
+long len= (long)Math.pow(10,n);
+StdOut.printlnf("For input array size= %d\n", len);
+	for(long i=o; i!=len; i++)
+{
+in.add(StdRandom.random());
+}
+Double[] arr= in.toArray(new Double[in.size()]);
+sort(arr);
+}
+}
+
+public static void sort(Comparable[] a)
+{
+long N=a.length;
+int h=1;
+	whilte(h< N/3)
+h= 3*h+1;
+double prev=0;
+	while(h>=1)
+{
+long comp=0;
+	for(int i=h; i
+{
+	for(int j=i; j>=h; j-=h)
+{
+	if(less(a[j], a[j-h]))
+	exch(a, j, j-h);
+comp++;
+}
+}
+
+double div=comp/h;
+	if(prev>0.0)
+		StdOut.printf("%d\t %10.1f \t\t %2.2f\n", h, div, div/prev);
+	else
+		StdOut.printlnf("%d \t %10.1f \t\t -- \n",h, div);
+	prev=div;
+h/=3;
+}
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+2.2.17
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
